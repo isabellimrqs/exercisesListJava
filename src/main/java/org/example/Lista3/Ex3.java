@@ -5,10 +5,10 @@ public class Ex3 {
 
         Scanner scanner = new Scanner(System.in);
 
-        double rating = 1;
-        double countGreat = 0, countGood = 0, countBad = 0;
-        double totalRating =  1 +  countGreat + countGood + countBad;
-        double percentTotal = (countGreat / totalRating) * 100;
+        int rating = 1;
+        int countGreat = 0, countGood = 0, countBad = 0;
+        int totalRating =  1 +  countGreat + countGood + countBad;
+        int percentTotal = (countGreat / totalRating) * 100;
 
         System.out.println("Hey there to my FRIENDS lovers <3");
         Thread.sleep(1000);
