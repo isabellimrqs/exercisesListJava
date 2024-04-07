@@ -6,29 +6,31 @@ public class Ex5 {
 
         Scanner scanner = new Scanner(System.in);
 
-        int countBalance = 0;
-        double balance;
+        int positiveCount = 0;
+        int negativeCount = 0;
 
         while (true) {
-            System.out.println("Please, enter your balance: ");
-            balance = scanner.nextDouble();
+            System.out.println("Please, enter your balance (type 0 to exit): ");
+            double balance = scanner.nextDouble();
 
-            System.out.println("Do you want to inform another balance? (Y/N): ");
-            String again = scanner.next().toUpperCase();
-            if (again.equals("N")) {
+            if (balance == 0) {
                 break;
             }
-            countBalance++;
 
+            if (balance > 0) {
+                positiveCount++;
+            } else {
+                negativeCount++;
+            }
         }
 
-        double countBalancePercent = countBalance / 100;
-        if (countBalancePercent >= 0.50 & balance > 0) {
+        int totalCustomers = positiveCount + negativeCount;
+        double positivePercentage = (double) positiveCount / totalCustomers * 100;
+
+        if (positivePercentage >= 50) {
             System.out.println("No risk!");
         } else {
             System.out.println("Risk to the bank! \uD83D\uDE28");
         }
-
-
     }
 }
